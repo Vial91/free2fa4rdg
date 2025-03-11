@@ -354,24 +354,24 @@ async def send_auth_request(telegram_id, domain_and_username):
                            normalized_username, network_err)
 
 
-#async def delete_message(chat_id, message_id):
-#    """Delete a user's Telegram message"""
-#    try:
-#        await delete_limited_message(chat_id, message_id)
-#    except aiogram_exceptions.TelegramBadRequest as req_err:
-#        logger.exception("TelegramBadRequest: %s", req_err)
-#    except aiogram_exceptions.AiogramError as other_err:
-#        logger.exception("Error in process_auth_response: %s", other_err)
+async def delete_message(chat_id, message_id):
+    """Delete a user's Telegram message"""
+    try:
+        await delete_limited_message(chat_id, message_id)
+    except aiogram_exceptions.TelegramBadRequest as req_err:
+        logger.exception("TelegramBadRequest: %s", req_err)
+    except aiogram_exceptions.AiogramError as other_err:
+        logger.exception("Error in process_auth_response: %s", other_err)
 
 
-#async def send_message_after_delay(chat_id, delay, message_text, normalized_username, message_id):
-#    """Delete a user's Telegram message"""
-#    await asyncio.sleep(delay)
-#    try:
-#        await send_limited_message(chat_id, message_text)
-#        await delete_message(chat_id, message_id)
-#        auth_requests[normalized_username] = False
-#        asyncio.create_task(clear_auth_request(normalized_username))
+async def send_message_after_delay(chat_id, delay, message_text, normalized_username, message_id):
+    """Delete a user's Telegram message"""
+    await asyncio.sleep(delay)
+    try:
+        await send_limited_message(chat_id, message_text)
+        await delete_message(chat_id, message_id)
+        auth_requests[normalized_username] = False
+        asyncio.create_task(clear_auth_request(normalized_username))
     except aiogram_exceptions.AiogramError as error:
         logger.exception("Error when sending message after delay: %s", error)
 

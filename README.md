@@ -1,14 +1,14 @@
 # Free2FA4RDG: A Telegram Bot for Two-Factor Authentication in Windows RD Gateway
 
-[![Docker Hub](https://img.shields.io/docker/pulls/clllagob/free2fa4rdg.svg?style=flat-square)][Docker Hub]
-[![License](https://img.shields.io/github/license/clllagob/free2fa4rdg.svg?style=flat-square)][License]
+[![Docker Hub](https://img.shields.io/docker/pulls/vial91/free2fa4rdg.svg?style=flat-square)][Docker Hub]
+[![License](https://img.shields.io/github/license/vial91/free2fa4rdg.svg?style=flat-square)][License]
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/5b38ed1f5983438693f7ab92724d1282)][Codacy Badge]
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=CLLlAgOB_free2fa4rdg&metric=security_rating)][Security Rating]
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=vial91_free2fa4rdg&metric=security_rating)][Security Rating]
 
-[Docker Hub]:           https://hub.docker.com/r/clllagob/free2fa4rdg
-[License]:              https://github.com/clllagob/free2fa4rdg/blob/master/LICENSE
-[Codacy Badge]:         https://app.codacy.com/gh/CLLlAgOB/free2fa4rdg/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
-[Security Rating]:  https://sonarcloud.io/summary/new_code?id=CLLlAgOB_free2fa4rdg
+[Docker Hub]:           https://hub.docker.com/r/vial91/free2fa4rdg
+[License]:              https://github.com/vial91/free2fa4rdg/blob/master/LICENSE
+[Codacy Badge]:         https://app.codacy.com/gh/vial91/free2fa4rdg/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade
+[Security Rating]:  https://sonarcloud.io/summary/new_code?id=vial91_free2fa4rdg
 
 ![screenshot](img/1-0en.png)
 
@@ -76,7 +76,7 @@ The installation script has been tested on Ubuntu 22.04 LTS and CentOS 7. Howeve
    ```
 4. Run the installation script:
    ```
-   curl -o install.sh https://raw.githubusercontent.com/CLLlAgOB/free2fa4rdg/main/install.sh && bash install.sh
+   curl -o install.sh https://raw.githubusercontent.com/vial91/free2fa4rdg/main/install.sh && bash install.sh
    ```
 5. Follow the script instructions.
 6. Create a dns entry for the admin portal (https://free2fa4rdg_admin_html by default) or the name you specified in the ADDITIONAL_DNS_NAME_FOR_ADMIN_HTML parameter. Default password and login for the admin portal: admin admin.
